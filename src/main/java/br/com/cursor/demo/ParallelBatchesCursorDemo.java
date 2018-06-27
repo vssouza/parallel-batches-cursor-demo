@@ -19,8 +19,8 @@ public class ParallelBatchesCursorDemo{
 
         DataRetriever dataRetriever = new DataRetriever();
 
-        // retrieve all types from a file and get the IDs from mongoDB
-        List<List<Integer>> instanceIds =  Files.lines(Paths.get(TYPES_FILE_NAME)).map(
+//         retrieve all types from a file and get the IDs from mongoDB
+        List<List<Integer>> instanceIds =  Files.lines(Paths.get(TYPES_FILE_NAME)).parallel().map(
                 s -> DemoType.getDemoType(s)
         ).map(
                 s -> dataRetriever.retrieveIdsFromMongo(s).iterator()
@@ -29,6 +29,11 @@ public class ParallelBatchesCursorDemo{
         dataRetriever.close();
 
         // now we have the complete list of IDs to be retrieved so we split in batches and fire in parallel to threads
+        System.out.println(instanceIds.size());
+
+        for(List<Integer> idList : instanceIds) {
+            System.out.println(idList.size());
+        }
 
 
 
@@ -45,7 +50,7 @@ public class ParallelBatchesCursorDemo{
         DataGenerator generator = new DataGenerator(TYPES_FILE_NAME, NUMBER_OF_TYPES);
         generator.generateTypes();
         int numberOfInstances = generator.generateInstances();
-        System.out.println(String.format("%d types generated. %d instances generage.", NUMBER_OF_TYPES, numberOfInstances));
+        System.out.println(String.format("%d types generated. %d instances generated.", NUMBER_OF_TYPES, numberOfInstances));
     }
 
     public static void clearData() {
