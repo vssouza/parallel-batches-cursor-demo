@@ -42,7 +42,7 @@ public class ParallelBatchesCursorDemo{
 
     private int processBatch(final BatchJob batchJob) {
         System.out.println(String.format("Processing batch job %d of size %d for namespace %s and type %s", batchJob.getBatchId(),
-                batchJob.getIds().length, batchJob.getDemoType().getNamespace(), batchJob.getDemoType()));
+                batchJob.getIds().length, batchJob.getDemoType().getNamespace(), batchJob.getDemoType().getType()));
         final DataUpdater dataUpdater = new DataUpdater(MongoUtils.DATABASE_NAME, MongoUtils.COLLECTION_NAME);
         int[] batchJobIds = batchJob.getIds();
         int countUpdated = 0;
