@@ -31,7 +31,7 @@ public class DataGenerator {
     }
 
     public int generateInstances(final DemoType demoType, final String databaseName, final String collectionName) {
-        MongoCollection collection = mongoUtils.getCollection(collectionName, mongoUtils.getDatabase(databaseName));
+        MongoCollection<Document> collection = mongoUtils.getCollection(collectionName, mongoUtils.getDatabase(databaseName));
         int instancesToGenerate = new Random().nextInt((numberOfTypes * 1000) - minInstancesToGenerate.intValue()) + minInstancesToGenerate.intValue();
         System.out.println(String.format("Generating %d instances to %s %s", instancesToGenerate, demoType.getNamespace(), demoType.getType()));
         for(int counter = 0; counter < instancesToGenerate; counter++, instanceId++) {

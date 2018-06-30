@@ -8,8 +8,7 @@ public class DataCleaner {
 
     public boolean removeTypes(String fileName) {
         final File file = new File(fileName);
-        file.delete();
-        return true;
+        return file.delete();
     }
 
     public boolean cleanDatabase(String databaseName) {

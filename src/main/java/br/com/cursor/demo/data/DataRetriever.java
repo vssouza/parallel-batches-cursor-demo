@@ -61,7 +61,7 @@ public class DataRetriever {
     }
 
     private List<Integer> retrieveIdsFromMongo(DemoType demoType) {
-        final MongoCollection collection = mongoUtils.getCollection(collectionName, mongoUtils.getDatabase(databaseName));
+        final MongoCollection<Document> collection = mongoUtils.getCollection(collectionName, mongoUtils.getDatabase(databaseName));
         final BasicDBObject criteria = new BasicDBObject("namespace", demoType.getNamespace()).append("type", demoType.getType());
         final FindIterable<Document> documentIds = collection.find(criteria).projection(Projections.fields(Projections.include("id")));
         final List<Integer> idsList = new ArrayList<>();

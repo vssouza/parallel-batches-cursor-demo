@@ -34,14 +34,14 @@ public class ParallelBatchesCursorDemo{
         System.out.println(String.format("Finished to run at:  %s", dateFormat.format(date)));
     }
 
-    public void run() throws IOException {
+    private void run() throws IOException {
         System.out.println("Starting the parallel batch processing from cursor:");
         this.generateData();
         final DataRetriever dataRetriever = new DataRetriever(MongoUtils.DATABASE_NAME, MongoUtils.COLLECTION_NAME);
         List<BatchJob> batchJobs = getBatchJobs(dataRetriever);
         int processedCount = batchJobs
                 .parallelStream()
-                .mapToInt(s -> processBatch(s))
+                .mapToInt(this::processBatch)
                 .sum();
 
         System.out.println(String.format("Finishing the parallel batch processing: Processed %d registers.", processedCount));
@@ -54,9 +54,9 @@ public class ParallelBatchesCursorDemo{
         final DataUpdater dataUpdater = new DataUpdater(MongoUtils.DATABASE_NAME, MongoUtils.COLLECTION_NAME);
         int[] batchJobIds = batchJob.getIds();
         int countUpdated = 0;
-        for(int counter = 0; counter < batchJobIds.length; counter++) {
-            if((Math.floor(Math.random() * 2) + 1) % 2 == 1) {
-                dataUpdater.updateDemoTypToProcessed(batchJobIds[counter]);
+        for (int batchJobId : batchJobIds) {
+            if ((Math.floor(Math.random() * 2) + 1) % 2 == 1) {
+                dataUpdater.updateDemoTypToProcessed(batchJobId);
                 countUpdated++;
             }
         }
@@ -65,7 +65,7 @@ public class ParallelBatchesCursorDemo{
 
     private List<BatchJob> getBatchJobs(final DataRetriever dataRetriever) throws IOException {
         return Files.readAllLines(Paths.get(FileUtils.TYPES_FILE_NAME)).stream()
-                .map(s -> DemoType.getDemoType(s))
+                .map(DemoType::getDemoType)
                 .map(s -> dataRetriever.retrieveBatchJobsByType(s, BATCH_SIZE))
                 .collect(toFlattenBatchJobList());
     }
@@ -74,19 +74,19 @@ public class ParallelBatchesCursorDemo{
         return new FlattenListCollector<>();
     }
 
-    public void generateData() throws IOException {
+    private void generateData() throws IOException {
         System.out.println("Generating data for execution: ");
         final DataGenerator generator = new DataGenerator(FileUtils.NUMBER_OF_TYPES);
         generator.generateTypes(FileUtils.TYPES_FILE_NAME);
         int instancesGenerated = Files.readAllLines(Paths.get(FileUtils.TYPES_FILE_NAME))
                 .parallelStream()
-                .map(s -> DemoType.getDemoType(s))
+                .map(DemoType::getDemoType)
                 .mapToInt(s -> generator.generateInstances(s, MongoUtils.DATABASE_NAME, MongoUtils.COLLECTION_NAME))
                 .sum();
         System.out.println(String.format("%d types generated. %d instances generated.", FileUtils.NUMBER_OF_TYPES, instancesGenerated));
     }
 
-    public void clearData() {
+    private void clearData() {
         System.out.println("Clearing data for execution:");
         final DataCleaner cleaner = new DataCleaner();
         int fileCount = cleaner.removeTypes(FileUtils.TYPES_FILE_NAME) ? 1 : 0;

@@ -17,7 +17,7 @@ public class FlattenListCollector<T> implements Collector<List<T>, List<T>, List
     }
 
     public BiConsumer<List<T>, List<T>> accumulator() {
-        return (ts, t) -> ts.addAll(t);
+        return List::addAll;
     }
 
     public BinaryOperator<List<T>> combiner() {

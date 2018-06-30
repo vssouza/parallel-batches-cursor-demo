@@ -4,7 +4,7 @@ public class DemoType {
     private String namespace;
     private String type;
 
-    public DemoType(String namespace, String type) {
+    private DemoType(String namespace, String type) {
         this.namespace = namespace;
         this.type = type;
     }
