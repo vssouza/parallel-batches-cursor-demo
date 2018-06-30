@@ -8,7 +8,7 @@ import java.util.Date;
 
 public class ParallelBatchesDemo {
     private static final int BATCH_SIZE = 500;
-    private static ExecutorType EXECUTOR_TYPE = ExecutorType.SEQUENTIAL;
+    private static ExecutorType EXECUTOR_TYPE = ExecutorType.PARALLEL;
 
 
     public static void main(String[] args)  throws Exception {
