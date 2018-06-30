@@ -13,12 +13,13 @@ public class DataGenerator {
     private int instanceId = 0;
 
     private final int numberOfTypes;
-    private final Double minInstancesToGenerate;
+//    private final Double minInstancesToGenerate;
     private final MongoUtils mongoUtils;
+    private static final int INSTANCES_TO_GENERATE = 20000;
 
     public DataGenerator(int numberOfTypes) {
         this.numberOfTypes = numberOfTypes;
-        this.minInstancesToGenerate = (numberOfTypes - numberOfTypes * 0.8);
+//        this.minInstancesToGenerate = (numberOfTypes - numberOfTypes * 0.8);
         this.mongoUtils = MongoUtils.getInstance();
     }
 
@@ -32,7 +33,10 @@ public class DataGenerator {
 
     public int generateInstances(final DemoType demoType, final String databaseName, final String collectionName) {
         MongoCollection<Document> collection = mongoUtils.getCollection(collectionName, mongoUtils.getDatabase(databaseName));
-        int instancesToGenerate = new Random().nextInt((numberOfTypes * 1000) - minInstancesToGenerate.intValue()) + minInstancesToGenerate.intValue();
+        // Use this if you want to generate random number of instances per execution
+        // int instancesToGenerate = new Random().nextInt((numberOfTypes * 1000) - minInstancesToGenerate.intValue()) + minInstancesToGenerate.intValue();
+        // which is not our case because we want to process the same amout of instances in parallel and sequential to compare results
+        int instancesToGenerate = INSTANCES_TO_GENERATE;
         System.out.println(String.format("Generating %d instances to %s %s", instancesToGenerate, demoType.getNamespace(), demoType.getType()));
         for(int counter = 0; counter < instancesToGenerate; counter++, instanceId++) {
             collection.insertOne(createDocument(instanceId, demoType.getNamespace(), demoType.getType()));
