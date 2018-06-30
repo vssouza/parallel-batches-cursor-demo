@@ -13,17 +13,25 @@ import br.com.cursor.demo.util.MongoUtils;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 public class ParallelBatchesCursorDemo{
     private static final int BATCH_SIZE = 500;
 
     public static void main(String[] args)  throws Exception {
+        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+        Date date = new Date();
+        System.out.println(String.format("Started to run at: %s", dateFormat.format(date)));
         ParallelBatchesCursorDemo parallelBatchesCursorDemo = new ParallelBatchesCursorDemo();
         parallelBatchesCursorDemo.run();
         MongoUtils.getInstance().createCollection(MongoUtils.COLLECTION_NAME, MongoUtils.getInstance().getDatabase(MongoUtils.DATABASE_NAME));
         // Mongo connections are shared so should destroy only when the program finishes to execute
         MongoUtils.getInstance().destroy();
+        date = new Date();
+        System.out.println(String.format("Finished to run at:  %s", dateFormat.format(date)));
     }
 
     public void run() throws IOException {
@@ -56,8 +64,7 @@ public class ParallelBatchesCursorDemo{
     }
 
     private List<BatchJob> getBatchJobs(final DataRetriever dataRetriever) throws IOException {
-        return Files.readAllLines(Paths.get(FileUtils.TYPES_FILE_NAME))
-                .parallelStream()
+        return Files.readAllLines(Paths.get(FileUtils.TYPES_FILE_NAME)).stream()
                 .map(s -> DemoType.getDemoType(s))
                 .map(s -> dataRetriever.retrieveBatchJobsByType(s, BATCH_SIZE))
                 .collect(toFlattenBatchJobList());
