@@ -1,1 +1,1 @@
-# How to parallel Execution in Java
+# How to Parallel Execution in Java
