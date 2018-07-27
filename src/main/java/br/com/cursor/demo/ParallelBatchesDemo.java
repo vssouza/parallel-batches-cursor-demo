@@ -1,5 +1,7 @@
 package br.com.cursor.demo;
 
+import br.com.cursor.demo.executor.Executor;
+import br.com.cursor.demo.executor.ExecutorType;
 import br.com.cursor.demo.util.MongoUtils;
 
 import java.text.DateFormat;

@@ -1,4 +1,4 @@
-package br.com.cursor.demo;
+package br.com.cursor.demo.executor;
 
 import br.com.cursor.demo.collector.FlattenListCollector;
 import br.com.cursor.demo.data.DataGenerator;
@@ -13,7 +13,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
 
-public class ParallelExecutor extends Executor {
+public class ParallelExecutor extends BatchExecutor {
 
     private int batchSize;
 
@@ -46,15 +46,4 @@ public class ParallelExecutor extends Executor {
         return new FlattenListCollector<>();
     }
 
-    private void generateData() throws IOException {
-        System.out.println("Generating data in parallel for execution: ");
-        final DataGenerator generator = new DataGenerator(FileUtils.NUMBER_OF_TYPES);
-        generator.generateTypes(FileUtils.TYPES_FILE_NAME);
-        int instancesGenerated = Files.readAllLines(Paths.get(FileUtils.TYPES_FILE_NAME))
-                .parallelStream()
-                .map(DemoType::getDemoType)
-                .mapToInt(s -> generator.generateInstances(s, MongoUtils.DATABASE_NAME, MongoUtils.COLLECTION_NAME))
-                .sum();
-        System.out.println(String.format("%d types generated. %d instances generated.", FileUtils.NUMBER_OF_TYPES, instancesGenerated));
-    }
 }
