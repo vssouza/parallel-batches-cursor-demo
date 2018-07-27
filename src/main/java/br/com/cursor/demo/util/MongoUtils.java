@@ -29,10 +29,6 @@ public class MongoUtils {
         return mongoClient.getDatabase(databaseName);
     }
 
-    public void createCollection(String collectionName, MongoDatabase database) {
-        database.createCollection(collectionName);
-    }
-
     public MongoCollection<Document> getCollection(String collectionName, MongoDatabase database) {
         return database.getCollection(collectionName);
     }

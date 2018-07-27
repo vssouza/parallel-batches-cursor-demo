@@ -18,7 +18,6 @@ public class ParallelBatchesDemo {
         Date date = new Date();
         System.out.println(String.format("Started to run at: %s", dateFormat.format(date)));
         Executor.getExecutor(EXECUTOR_TYPE, BATCH_SIZE).run();
-        MongoUtils.getInstance().createCollection(MongoUtils.COLLECTION_NAME, MongoUtils.getInstance().getDatabase(MongoUtils.DATABASE_NAME));
         // Mongo connections are shared so should destroy only when the program finishes to execute
         MongoUtils.getInstance().destroy();
         date = new Date();
