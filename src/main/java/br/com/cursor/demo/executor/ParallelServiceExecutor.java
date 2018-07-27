@@ -26,6 +26,7 @@ public class ParallelServiceExecutor extends Executor {
          Files.readAllLines(Paths.get(FileUtils.TYPES_FILE_NAME)).stream()
                 .map(DemoType::getDemoType)
                 .forEach(s -> this.demoTypeProcess(s, dataRetriever));
+         TypeProcessorExecutorService.getInstance().waitExecutionToFinish();
         System.out.println(String.format("Finishing the parallel batch processing: Processed %d registers.",
                 TypeProcessorExecutorService.getInstance().getProcessedTasks()));
         this.clearData();
