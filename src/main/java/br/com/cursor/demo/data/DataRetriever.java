@@ -29,11 +29,22 @@ public class DataRetriever {
         List<BatchJob> batchJobs = new ArrayList<>();
         List<Integer> instanceIds = retrieveIdsFromMongo(demoType);
         System.out.println(String.format("Retrieving batch jobs for %s %s.", demoType.getNamespace(), demoType.getType()));
+        if(demoType.getNamespace().equalsIgnoreCase("namespace2") || demoType.getNamespace().equalsIgnoreCase("namespace4")
+                || demoType.getNamespace().equalsIgnoreCase("namespace6") || demoType.getNamespace().equalsIgnoreCase("namespace8")) {
+            try {
+                System.out.println("Long running batch type retrieve activity.");
+                Thread.sleep(30000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
         if (instanceIds.size() > 0) {
             composeBatchList(demoType, batchSize, batchJobs, instanceIds);
+            System.out.println(String.format("Finished retrieving batch jobs for %s %s.", demoType.getNamespace(), demoType.getType()));
             return batchJobs;
 
         } else {
+            System.out.println(String.format("Finished retrieving batch jobs for %s %s.", demoType.getNamespace(), demoType.getType()));
             return Collections.emptyList();
         }
     }
@@ -47,7 +58,7 @@ public class DataRetriever {
             beginIndex += currentBatchSize;
             iter++;
         }
-        System.out.println(String.format("Retrieved %d batch jobs for %s %s with a total of %d ids.",
+        System.out.println(String.format("Created %d batch jobs for %s %s with a total of %d ids.",
                 batchJobs.size(), demoType.getNamespace(), demoType.getType(), instanceIds.size()));
     }
 

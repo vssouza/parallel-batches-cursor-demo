@@ -32,7 +32,7 @@ public class TypeProcessorExecutorService {
 
     public void enqueueTask(final ExporterTask task) {
         this.executorService.execute(task);
-        this.queued.addAndGet(1);
+        this.queued.incrementAndGet();
     }
 
     public void incrementRunningTasks() {
@@ -49,22 +49,19 @@ public class TypeProcessorExecutorService {
         return this.totalProcessed.get();
     }
 
-    public int getRunningTasks() {
-        return this.running.get();
-    }
-
-    public int getQueuedTasks() {
-        return this.queued.get();
-    }
-
     public void waitExecutionToFinish() {
         boolean isFinished;
         do {
             isFinished = isFinished();
         } while(!isFinished);
+        this.shutdown();
     }
 
     private boolean isFinished() {
         return this.queued.get() == 0 && this.running.get() == 0;
+    }
+
+    public void shutdown() {
+        executorService.shutdown();
     }
 }

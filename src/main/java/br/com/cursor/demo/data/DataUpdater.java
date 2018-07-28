@@ -17,9 +17,9 @@ public class DataUpdater {
         this.collectionName = collectionName;
     }
 
-    public void updateDemoTypToProcessed(int id) {
+    public void updateDemoTypeToProcessed(int id) {
         final MongoCollection collection = mongoUtils.getCollection(collectionName, mongoUtils.getDatabase(databaseName));
-        BasicDBObject criteria = new BasicDBObject("_id", id);
+        BasicDBObject criteria = new BasicDBObject("id", id);
         Document document = new Document();
         document.put("processed", true);
         Bson updatedDocument = new Document("$set", document);

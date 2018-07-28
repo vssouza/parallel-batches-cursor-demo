@@ -2,6 +2,7 @@ package br.com.cursor.demo;
 
 import br.com.cursor.demo.executor.Executor;
 import br.com.cursor.demo.executor.ExecutorType;
+import br.com.cursor.demo.executor.TypeProcessorExecutorService;
 import br.com.cursor.demo.util.MongoUtils;
 
 import java.text.DateFormat;
@@ -10,7 +11,7 @@ import java.util.Date;
 
 public class ParallelBatchesDemo {
     private static final int BATCH_SIZE = 500;
-    private static ExecutorType EXECUTOR_TYPE = ExecutorType.PARALLEL;
+    private static ExecutorType EXECUTOR_TYPE = ExecutorType.PARALLEL_EXECUTOR_SERVICE;
 
 
     public static void main(String[] args)  throws Exception {

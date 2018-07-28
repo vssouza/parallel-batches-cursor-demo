@@ -26,7 +26,18 @@ public class BatchProcessorTask implements ExporterTask {
         final DataUpdater dataUpdater = new DataUpdater(MongoUtils.DATABASE_NAME, MongoUtils.COLLECTION_NAME);
         final int[] batchJobIds = batchJob.getIds();
         for (int batchJobId : batchJobIds) {
-            dataUpdater.updateDemoTypToProcessed(batchJobId);
+            if ((batchJob.getBatchId() % 10 == 0 && batchJobId % 100 == 0)) {
+                try {
+                    System.out.println(String.format("Long running batch job id %d for batch job %d of size %d for namespace %s and type %s", batchJobId, batchJob.getBatchId(),
+                            batchJob.getIds().length, batchJob.getDemoType().getNamespace(), batchJob.getDemoType().getType()));
+                    Thread.sleep(5001);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+            dataUpdater.updateDemoTypeToProcessed(batchJobId);
         }
+        System.out.println(String.format("Finished processing batch job %d of size %d for namespace %s and type %s", batchJob.getBatchId(),
+                batchJob.getIds().length, batchJob.getDemoType().getNamespace(), batchJob.getDemoType().getType()));
     }
 }

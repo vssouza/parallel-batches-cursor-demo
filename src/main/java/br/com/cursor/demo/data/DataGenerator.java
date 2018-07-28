@@ -15,7 +15,7 @@ public class DataGenerator {
     private final int numberOfTypes;
 //    private final Double minInstancesToGenerate;
     private final MongoUtils mongoUtils;
-    private static final int INSTANCES_TO_GENERATE = 20000;
+    private static final int INSTANCES_TO_GENERATE = 10000;
 
     public DataGenerator(int numberOfTypes) {
         this.numberOfTypes = numberOfTypes;

@@ -23,12 +23,12 @@ public class ParallelServiceExecutor extends Executor {
         System.out.println("Starting the Service Executor parallel batch processing from cursor:");
         this.generateData();
         final DataRetriever dataRetriever = new DataRetriever(MongoUtils.DATABASE_NAME, MongoUtils.COLLECTION_NAME);
-         Files.readAllLines(Paths.get(FileUtils.TYPES_FILE_NAME)).stream()
-                .map(DemoType::getDemoType)
-                .forEach(s -> this.demoTypeProcess(s, dataRetriever));
-         TypeProcessorExecutorService.getInstance().waitExecutionToFinish();
+        Files.readAllLines(Paths.get(FileUtils.TYPES_FILE_NAME)).stream()
+               .map(DemoType::getDemoType)
+               .forEach(s -> this.demoTypeProcess(s, dataRetriever));
+        TypeProcessorExecutorService.getInstance().waitExecutionToFinish();
         System.out.println(String.format("Finishing the parallel batch processing: Processed %d registers.",
-                TypeProcessorExecutorService.getInstance().getProcessedTasks()));
+                (TypeProcessorExecutorService.getInstance().getProcessedTasks() - 10) * 500));
         this.clearData();
     }
 

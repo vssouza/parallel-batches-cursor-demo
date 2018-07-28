@@ -13,11 +13,20 @@ public abstract class BatchExecutor extends Executor{
         final int[] batchJobIds = batchJob.getIds();
         int countUpdated = 0;
         for (int batchJobId : batchJobIds) {
-//            if ((Math.floor(Math.random() * 2) + 1) % 2 == 1) {
-                dataUpdater.updateDemoTypToProcessed(batchJobId);
-                countUpdated++;
-//            }
+            if (batchJob.getBatchId() % 10 == 0 && batchJobId % 100 == 0) {
+                try {
+                    System.out.println(String.format("Long running batch job id %d for batch job %d of size %d for namespace %s and type %s", batchJobId, batchJob.getBatchId(),
+                            batchJob.getIds().length, batchJob.getDemoType().getNamespace(), batchJob.getDemoType().getType()));
+                    Thread.sleep(5000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+            dataUpdater.updateDemoTypeToProcessed(batchJobId);
+            countUpdated++;
         }
+        System.out.println(String.format("Finished processing batch job %d of size %d for namespace %s and type %s", batchJob.getBatchId(),
+                batchJob.getIds().length, batchJob.getDemoType().getNamespace(), batchJob.getDemoType().getType()));
         return countUpdated;
     }
 }
