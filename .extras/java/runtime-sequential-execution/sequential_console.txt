@@ -1,0 +1,630 @@
+"C:\Program Files\Java\jdk-10.0.1\bin\java.exe" "-agentpath:C:\Program Files\jprofiler10\bin\windows-x64\jprofilerti.dll=port=33356" -Dfile.encoding=UTF-8 -classpath C:\Workspaces\Java\parallel-batches-demo\target\classes;C:\Users\sandman\.m2\repository\org\mongodb\mongo-java-driver\3.7.1\mongo-java-driver-3.7.1.jar br.com.cursor.demo.ParallelBatchesDemo
+JProfiler> Protocol version 59
+JProfiler> Java 9+ detected.
+JProfiler> JVMTI version 1.1 detected.
+JProfiler> 64-bit library
+JProfiler> Listening on port: 33356.
+JProfiler> Enabling native methods instrumentation.
+JProfiler> Can retransform classes.
+JProfiler> Can retransform any class.
+JProfiler> Native library initialized
+JProfiler> VM initialized
+JProfiler> Retransforming 7 base class files.
+JProfiler> Base classes instrumented.
+JProfiler> Waiting for a connection from the JProfiler GUI ...
+JProfiler> Using sampling (5 ms)
+JProfiler> Time measurement: elapsed time
+JProfiler> CPU profiling enabled
+Started to run at: 2018/07/28 03:56:57
+Starting the sequential batch processing from cursor:
+Generating data in parallel for execution: 
+Jul 28, 2018 3:56:58 A.M. com.mongodb.diagnostics.logging.JULLogger log
+INFO: Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+Generating 10000 instances to namespace4 type4
+Generating 10000 instances to namespace8 type8
+Generating 10000 instances to namespace1 type1
+Generating 10000 instances to namespace9 type9
+Generating 10000 instances to namespace6 type6
+Generating 10000 instances to namespace5 type5
+Generating 10000 instances to namespace7 type7
+Generating 10000 instances to namespace2 type2
+Jul 28, 2018 3:56:58 A.M. com.mongodb.diagnostics.logging.JULLogger log
+INFO: Cluster description not yet available. Waiting for 30000 ms before timing out
+Jul 28, 2018 3:56:58 A.M. com.mongodb.diagnostics.logging.JULLogger log
+INFO: Cluster description not yet available. Waiting for 30000 ms before timing out
+Jul 28, 2018 3:56:58 A.M. com.mongodb.diagnostics.logging.JULLogger log
+INFO: Cluster description not yet available. Waiting for 30000 ms before timing out
+Jul 28, 2018 3:56:58 A.M. com.mongodb.diagnostics.logging.JULLogger log
+INFO: Cluster description not yet available. Waiting for 30000 ms before timing out
+Jul 28, 2018 3:56:58 A.M. com.mongodb.diagnostics.logging.JULLogger log
+INFO: Cluster description not yet available. Waiting for 30000 ms before timing out
+Jul 28, 2018 3:56:58 A.M. com.mongodb.diagnostics.logging.JULLogger log
+INFO: Cluster description not yet available. Waiting for 30000 ms before timing out
+Jul 28, 2018 3:56:58 A.M. com.mongodb.diagnostics.logging.JULLogger log
+INFO: Cluster description not yet available. Waiting for 30000 ms before timing out
+Jul 28, 2018 3:56:58 A.M. com.mongodb.diagnostics.logging.JULLogger log
+INFO: Cluster description not yet available. Waiting for 30000 ms before timing out
+Jul 28, 2018 3:56:58 A.M. com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:1, serverValue:145}] to localhost:27017
+Jul 28, 2018 3:56:58 A.M. com.mongodb.diagnostics.logging.JULLogger log
+INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 5]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=4553100}
+Jul 28, 2018 3:56:58 A.M. com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:8, serverValue:147}] to localhost:27017
+Jul 28, 2018 3:56:58 A.M. com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:2, serverValue:146}] to localhost:27017
+Jul 28, 2018 3:56:58 A.M. com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:7, serverValue:149}] to localhost:27017
+Jul 28, 2018 3:56:58 A.M. com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:3, serverValue:148}] to localhost:27017
+Jul 28, 2018 3:56:58 A.M. com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:4, serverValue:152}] to localhost:27017
+Jul 28, 2018 3:56:58 A.M. com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:5, serverValue:151}] to localhost:27017
+Jul 28, 2018 3:56:58 A.M. com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:6, serverValue:153}] to localhost:27017
+Jul 28, 2018 3:56:58 A.M. com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:9, serverValue:150}] to localhost:27017
+Generating 10000 instances to namespace0 type0
+Generating 10000 instances to namespace3 type3
+10 types generated. 100000 instances generated.
+Retrieving batch jobs for namespace0 type0.
+Created 20 batch jobs for namespace0 type0 with a total of 10000 ids.
+Finished retrieving batch jobs for namespace0 type0.
+Retrieving batch jobs for namespace1 type1.
+Created 20 batch jobs for namespace1 type1 with a total of 10000 ids.
+Finished retrieving batch jobs for namespace1 type1.
+Retrieving batch jobs for namespace2 type2.
+Long running batch type retrieve activity.
+Created 20 batch jobs for namespace2 type2 with a total of 10000 ids.
+Finished retrieving batch jobs for namespace2 type2.
+Retrieving batch jobs for namespace3 type3.
+Created 20 batch jobs for namespace3 type3 with a total of 10000 ids.
+Finished retrieving batch jobs for namespace3 type3.
+Retrieving batch jobs for namespace4 type4.
+Long running batch type retrieve activity.
+Created 20 batch jobs for namespace4 type4 with a total of 10000 ids.
+Finished retrieving batch jobs for namespace4 type4.
+Retrieving batch jobs for namespace5 type5.
+Created 20 batch jobs for namespace5 type5 with a total of 10000 ids.
+Finished retrieving batch jobs for namespace5 type5.
+Retrieving batch jobs for namespace6 type6.
+Long running batch type retrieve activity.
+Created 20 batch jobs for namespace6 type6 with a total of 10000 ids.
+Finished retrieving batch jobs for namespace6 type6.
+Retrieving batch jobs for namespace7 type7.
+Created 20 batch jobs for namespace7 type7 with a total of 10000 ids.
+Finished retrieving batch jobs for namespace7 type7.
+Retrieving batch jobs for namespace8 type8.
+Long running batch type retrieve activity.
+Created 20 batch jobs for namespace8 type8 with a total of 10000 ids.
+Finished retrieving batch jobs for namespace8 type8.
+Retrieving batch jobs for namespace9 type9.
+Created 20 batch jobs for namespace9 type9 with a total of 10000 ids.
+Finished retrieving batch jobs for namespace9 type9.
+Processing batch job 0 of size 500 for namespace namespace0 and type type0
+Long running batch job id 80200 for batch job 0 of size 500 for namespace namespace0 and type type0
+Long running batch job id 80300 for batch job 0 of size 500 for namespace namespace0 and type type0
+Long running batch job id 80800 for batch job 0 of size 500 for namespace namespace0 and type type0
+Finished processing batch job 0 of size 500 for namespace namespace0 and type type0
+Processing batch job 1 of size 500 for namespace namespace0 and type type0
+Finished processing batch job 1 of size 500 for namespace namespace0 and type type0
+Processing batch job 2 of size 500 for namespace namespace0 and type type0
+Finished processing batch job 2 of size 500 for namespace namespace0 and type type0
+Processing batch job 3 of size 500 for namespace namespace0 and type type0
+Finished processing batch job 3 of size 500 for namespace namespace0 and type type0
+Processing batch job 4 of size 500 for namespace namespace0 and type type0
+Finished processing batch job 4 of size 500 for namespace namespace0 and type type0
+Processing batch job 5 of size 500 for namespace namespace0 and type type0
+Finished processing batch job 5 of size 500 for namespace namespace0 and type type0
+Processing batch job 6 of size 500 for namespace namespace0 and type type0
+Finished processing batch job 6 of size 500 for namespace namespace0 and type type0
+Processing batch job 7 of size 500 for namespace namespace0 and type type0
+Finished processing batch job 7 of size 500 for namespace namespace0 and type type0
+Processing batch job 8 of size 500 for namespace namespace0 and type type0
+Finished processing batch job 8 of size 500 for namespace namespace0 and type type0
+Processing batch job 9 of size 500 for namespace namespace0 and type type0
+Finished processing batch job 9 of size 500 for namespace namespace0 and type type0
+Processing batch job 10 of size 500 for namespace namespace0 and type type0
+Long running batch job id 89900 for batch job 10 of size 500 for namespace namespace0 and type type0
+Long running batch job id 90000 for batch job 10 of size 500 for namespace namespace0 and type type0
+Long running batch job id 90100 for batch job 10 of size 500 for namespace namespace0 and type type0
+Finished processing batch job 10 of size 500 for namespace namespace0 and type type0
+Processing batch job 11 of size 500 for namespace namespace0 and type type0
+Finished processing batch job 11 of size 500 for namespace namespace0 and type type0
+Processing batch job 12 of size 500 for namespace namespace0 and type type0
+Finished processing batch job 12 of size 500 for namespace namespace0 and type type0
+Processing batch job 13 of size 500 for namespace namespace0 and type type0
+Finished processing batch job 13 of size 500 for namespace namespace0 and type type0
+Processing batch job 14 of size 500 for namespace namespace0 and type type0
+Finished processing batch job 14 of size 500 for namespace namespace0 and type type0
+Processing batch job 15 of size 500 for namespace namespace0 and type type0
+Finished processing batch job 15 of size 500 for namespace namespace0 and type type0
+Processing batch job 16 of size 500 for namespace namespace0 and type type0
+Finished processing batch job 16 of size 500 for namespace namespace0 and type type0
+Processing batch job 17 of size 500 for namespace namespace0 and type type0
+Finished processing batch job 17 of size 500 for namespace namespace0 and type type0
+Processing batch job 18 of size 500 for namespace namespace0 and type type0
+Finished processing batch job 18 of size 500 for namespace namespace0 and type type0
+Processing batch job 19 of size 500 for namespace namespace0 and type type0
+Finished processing batch job 19 of size 500 for namespace namespace0 and type type0
+Processing batch job 0 of size 500 for namespace namespace1 and type type1
+Long running batch job id 0 for batch job 0 of size 500 for namespace namespace1 and type type1
+Long running batch job id 300 for batch job 0 of size 500 for namespace namespace1 and type type1
+Long running batch job id 400 for batch job 0 of size 500 for namespace namespace1 and type type1
+Long running batch job id 2100 for batch job 0 of size 500 for namespace namespace1 and type type1
+Long running batch job id 2400 for batch job 0 of size 500 for namespace namespace1 and type type1
+Long running batch job id 2700 for batch job 0 of size 500 for namespace namespace1 and type type1
+Long running batch job id 3200 for batch job 0 of size 500 for namespace namespace1 and type type1
+Finished processing batch job 0 of size 500 for namespace namespace1 and type type1
+Processing batch job 1 of size 500 for namespace namespace1 and type type1
+Finished processing batch job 1 of size 500 for namespace namespace1 and type type1
+Processing batch job 2 of size 500 for namespace namespace1 and type type1
+Finished processing batch job 2 of size 500 for namespace namespace1 and type type1
+Processing batch job 3 of size 500 for namespace namespace1 and type type1
+Finished processing batch job 3 of size 500 for namespace namespace1 and type type1
+Processing batch job 4 of size 500 for namespace namespace1 and type type1
+Finished processing batch job 4 of size 500 for namespace namespace1 and type type1
+Processing batch job 5 of size 500 for namespace namespace1 and type type1
+Finished processing batch job 5 of size 500 for namespace namespace1 and type type1
+Processing batch job 6 of size 500 for namespace namespace1 and type type1
+Finished processing batch job 6 of size 500 for namespace namespace1 and type type1
+Processing batch job 7 of size 500 for namespace namespace1 and type type1
+Finished processing batch job 7 of size 500 for namespace namespace1 and type type1
+Processing batch job 8 of size 500 for namespace namespace1 and type type1
+Finished processing batch job 8 of size 500 for namespace namespace1 and type type1
+Processing batch job 9 of size 500 for namespace namespace1 and type type1
+Finished processing batch job 9 of size 500 for namespace namespace1 and type type1
+Processing batch job 10 of size 500 for namespace namespace1 and type type1
+Long running batch job id 40900 for batch job 10 of size 500 for namespace namespace1 and type type1
+Long running batch job id 42200 for batch job 10 of size 500 for namespace namespace1 and type type1
+Long running batch job id 43700 for batch job 10 of size 500 for namespace namespace1 and type type1
+Long running batch job id 43900 for batch job 10 of size 500 for namespace namespace1 and type type1
+Finished processing batch job 10 of size 500 for namespace namespace1 and type type1
+Processing batch job 11 of size 500 for namespace namespace1 and type type1
+Finished processing batch job 11 of size 500 for namespace namespace1 and type type1
+Processing batch job 12 of size 500 for namespace namespace1 and type type1
+Finished processing batch job 12 of size 500 for namespace namespace1 and type type1
+Processing batch job 13 of size 500 for namespace namespace1 and type type1
+Finished processing batch job 13 of size 500 for namespace namespace1 and type type1
+Processing batch job 14 of size 500 for namespace namespace1 and type type1
+Finished processing batch job 14 of size 500 for namespace namespace1 and type type1
+Processing batch job 15 of size 500 for namespace namespace1 and type type1
+Finished processing batch job 15 of size 500 for namespace namespace1 and type type1
+Processing batch job 16 of size 500 for namespace namespace1 and type type1
+Finished processing batch job 16 of size 500 for namespace namespace1 and type type1
+Processing batch job 17 of size 500 for namespace namespace1 and type type1
+Finished processing batch job 17 of size 500 for namespace namespace1 and type type1
+Processing batch job 18 of size 500 for namespace namespace1 and type type1
+Finished processing batch job 18 of size 500 for namespace namespace1 and type type1
+Processing batch job 19 of size 500 for namespace namespace1 and type type1
+Finished processing batch job 19 of size 500 for namespace namespace1 and type type1
+Processing batch job 0 of size 500 for namespace namespace2 and type type2
+Long running batch job id 0 for batch job 0 of size 500 for namespace namespace2 and type type2
+Long running batch job id 100 for batch job 0 of size 500 for namespace namespace2 and type type2
+Long running batch job id 700 for batch job 0 of size 500 for namespace namespace2 and type type2
+Long running batch job id 1300 for batch job 0 of size 500 for namespace namespace2 and type type2
+Long running batch job id 2300 for batch job 0 of size 500 for namespace namespace2 and type type2
+Long running batch job id 2900 for batch job 0 of size 500 for namespace namespace2 and type type2
+Long running batch job id 3800 for batch job 0 of size 500 for namespace namespace2 and type type2
+Finished processing batch job 0 of size 500 for namespace namespace2 and type type2
+Processing batch job 1 of size 500 for namespace namespace2 and type type2
+Finished processing batch job 1 of size 500 for namespace namespace2 and type type2
+Processing batch job 2 of size 500 for namespace namespace2 and type type2
+Finished processing batch job 2 of size 500 for namespace namespace2 and type type2
+Processing batch job 3 of size 500 for namespace namespace2 and type type2
+Finished processing batch job 3 of size 500 for namespace namespace2 and type type2
+Processing batch job 4 of size 500 for namespace namespace2 and type type2
+Finished processing batch job 4 of size 500 for namespace namespace2 and type type2
+Processing batch job 5 of size 500 for namespace namespace2 and type type2
+Finished processing batch job 5 of size 500 for namespace namespace2 and type type2
+Processing batch job 6 of size 500 for namespace namespace2 and type type2
+Finished processing batch job 6 of size 500 for namespace namespace2 and type type2
+Processing batch job 7 of size 500 for namespace namespace2 and type type2
+Finished processing batch job 7 of size 500 for namespace namespace2 and type type2
+Processing batch job 8 of size 500 for namespace namespace2 and type type2
+Finished processing batch job 8 of size 500 for namespace namespace2 and type type2
+Processing batch job 9 of size 500 for namespace namespace2 and type type2
+Finished processing batch job 9 of size 500 for namespace namespace2 and type type2
+Processing batch job 10 of size 500 for namespace namespace2 and type type2
+Long running batch job id 40000 for batch job 10 of size 500 for namespace namespace2 and type type2
+Long running batch job id 41800 for batch job 10 of size 500 for namespace namespace2 and type type2
+Long running batch job id 41900 for batch job 10 of size 500 for namespace namespace2 and type type2
+Long running batch job id 42100 for batch job 10 of size 500 for namespace namespace2 and type type2
+Long running batch job id 42300 for batch job 10 of size 500 for namespace namespace2 and type type2
+Long running batch job id 42900 for batch job 10 of size 500 for namespace namespace2 and type type2
+Finished processing batch job 10 of size 500 for namespace namespace2 and type type2
+Processing batch job 11 of size 500 for namespace namespace2 and type type2
+Finished processing batch job 11 of size 500 for namespace namespace2 and type type2
+Processing batch job 12 of size 500 for namespace namespace2 and type type2
+Finished processing batch job 12 of size 500 for namespace namespace2 and type type2
+Processing batch job 13 of size 500 for namespace namespace2 and type type2
+Finished processing batch job 13 of size 500 for namespace namespace2 and type type2
+Processing batch job 14 of size 500 for namespace namespace2 and type type2
+Finished processing batch job 14 of size 500 for namespace namespace2 and type type2
+Processing batch job 15 of size 500 for namespace namespace2 and type type2
+Finished processing batch job 15 of size 500 for namespace namespace2 and type type2
+Processing batch job 16 of size 500 for namespace namespace2 and type type2
+Finished processing batch job 16 of size 500 for namespace namespace2 and type type2
+Processing batch job 17 of size 500 for namespace namespace2 and type type2
+Finished processing batch job 17 of size 500 for namespace namespace2 and type type2
+Processing batch job 18 of size 500 for namespace namespace2 and type type2
+Finished processing batch job 18 of size 500 for namespace namespace2 and type type2
+Processing batch job 19 of size 500 for namespace namespace2 and type type2
+Finished processing batch job 19 of size 500 for namespace namespace2 and type type2
+Processing batch job 0 of size 500 for namespace namespace3 and type type3
+Long running batch job id 80000 for batch job 0 of size 500 for namespace namespace3 and type type3
+Long running batch job id 80400 for batch job 0 of size 500 for namespace namespace3 and type type3
+Long running batch job id 80500 for batch job 0 of size 500 for namespace namespace3 and type type3
+Long running batch job id 80600 for batch job 0 of size 500 for namespace namespace3 and type type3
+Long running batch job id 80700 for batch job 0 of size 500 for namespace namespace3 and type type3
+Finished processing batch job 0 of size 500 for namespace namespace3 and type type3
+Processing batch job 1 of size 500 for namespace namespace3 and type type3
+Finished processing batch job 1 of size 500 for namespace namespace3 and type type3
+Processing batch job 2 of size 500 for namespace namespace3 and type type3
+Finished processing batch job 2 of size 500 for namespace namespace3 and type type3
+Processing batch job 3 of size 500 for namespace namespace3 and type type3
+Finished processing batch job 3 of size 500 for namespace namespace3 and type type3
+Processing batch job 4 of size 500 for namespace namespace3 and type type3
+Finished processing batch job 4 of size 500 for namespace namespace3 and type type3
+Processing batch job 5 of size 500 for namespace namespace3 and type type3
+Finished processing batch job 5 of size 500 for namespace namespace3 and type type3
+Processing batch job 6 of size 500 for namespace namespace3 and type type3
+Finished processing batch job 6 of size 500 for namespace namespace3 and type type3
+Processing batch job 7 of size 500 for namespace namespace3 and type type3
+Finished processing batch job 7 of size 500 for namespace namespace3 and type type3
+Processing batch job 8 of size 500 for namespace namespace3 and type type3
+Finished processing batch job 8 of size 500 for namespace namespace3 and type type3
+Processing batch job 9 of size 500 for namespace namespace3 and type type3
+Finished processing batch job 9 of size 500 for namespace namespace3 and type type3
+Processing batch job 10 of size 500 for namespace namespace3 and type type3
+Long running batch job id 90200 for batch job 10 of size 500 for namespace namespace3 and type type3
+Long running batch job id 90300 for batch job 10 of size 500 for namespace namespace3 and type type3
+Long running batch job id 90400 for batch job 10 of size 500 for namespace namespace3 and type type3
+Long running batch job id 90500 for batch job 10 of size 500 for namespace namespace3 and type type3
+Long running batch job id 90600 for batch job 10 of size 500 for namespace namespace3 and type type3
+Long running batch job id 90700 for batch job 10 of size 500 for namespace namespace3 and type type3
+Long running batch job id 90800 for batch job 10 of size 500 for namespace namespace3 and type type3
+Long running batch job id 90900 for batch job 10 of size 500 for namespace namespace3 and type type3
+Long running batch job id 91000 for batch job 10 of size 500 for namespace namespace3 and type type3
+Finished processing batch job 10 of size 500 for namespace namespace3 and type type3
+Processing batch job 11 of size 500 for namespace namespace3 and type type3
+Finished processing batch job 11 of size 500 for namespace namespace3 and type type3
+Processing batch job 12 of size 500 for namespace namespace3 and type type3
+Finished processing batch job 12 of size 500 for namespace namespace3 and type type3
+Processing batch job 13 of size 500 for namespace namespace3 and type type3
+Finished processing batch job 13 of size 500 for namespace namespace3 and type type3
+Processing batch job 14 of size 500 for namespace namespace3 and type type3
+Finished processing batch job 14 of size 500 for namespace namespace3 and type type3
+Processing batch job 15 of size 500 for namespace namespace3 and type type3
+Finished processing batch job 15 of size 500 for namespace namespace3 and type type3
+Processing batch job 16 of size 500 for namespace namespace3 and type type3
+Finished processing batch job 16 of size 500 for namespace namespace3 and type type3
+Processing batch job 17 of size 500 for namespace namespace3 and type type3
+Finished processing batch job 17 of size 500 for namespace namespace3 and type type3
+Processing batch job 18 of size 500 for namespace namespace3 and type type3
+Finished processing batch job 18 of size 500 for namespace namespace3 and type type3
+Processing batch job 19 of size 500 for namespace namespace3 and type type3
+Finished processing batch job 19 of size 500 for namespace namespace3 and type type3
+Processing batch job 0 of size 500 for namespace namespace4 and type type4
+Long running batch job id 0 for batch job 0 of size 500 for namespace namespace4 and type type4
+Long running batch job id 900 for batch job 0 of size 500 for namespace namespace4 and type type4
+Long running batch job id 1200 for batch job 0 of size 500 for namespace namespace4 and type type4
+Long running batch job id 1900 for batch job 0 of size 500 for namespace namespace4 and type type4
+Long running batch job id 2500 for batch job 0 of size 500 for namespace namespace4 and type type4
+Long running batch job id 3000 for batch job 0 of size 500 for namespace namespace4 and type type4
+Long running batch job id 3300 for batch job 0 of size 500 for namespace namespace4 and type type4
+Finished processing batch job 0 of size 500 for namespace namespace4 and type type4
+Processing batch job 1 of size 500 for namespace namespace4 and type type4
+Finished processing batch job 1 of size 500 for namespace namespace4 and type type4
+Processing batch job 2 of size 500 for namespace namespace4 and type type4
+Finished processing batch job 2 of size 500 for namespace namespace4 and type type4
+Processing batch job 3 of size 500 for namespace namespace4 and type type4
+Finished processing batch job 3 of size 500 for namespace namespace4 and type type4
+Processing batch job 4 of size 500 for namespace namespace4 and type type4
+Finished processing batch job 4 of size 500 for namespace namespace4 and type type4
+Processing batch job 5 of size 500 for namespace namespace4 and type type4
+Finished processing batch job 5 of size 500 for namespace namespace4 and type type4
+Processing batch job 6 of size 500 for namespace namespace4 and type type4
+Finished processing batch job 6 of size 500 for namespace namespace4 and type type4
+Processing batch job 7 of size 500 for namespace namespace4 and type type4
+Finished processing batch job 7 of size 500 for namespace namespace4 and type type4
+Processing batch job 8 of size 500 for namespace namespace4 and type type4
+Finished processing batch job 8 of size 500 for namespace namespace4 and type type4
+Processing batch job 9 of size 500 for namespace namespace4 and type type4
+Finished processing batch job 9 of size 500 for namespace namespace4 and type type4
+Processing batch job 10 of size 500 for namespace namespace4 and type type4
+Long running batch job id 40700 for batch job 10 of size 500 for namespace namespace4 and type type4
+Long running batch job id 41000 for batch job 10 of size 500 for namespace namespace4 and type type4
+Long running batch job id 42600 for batch job 10 of size 500 for namespace namespace4 and type type4
+Long running batch job id 43300 for batch job 10 of size 500 for namespace namespace4 and type type4
+Finished processing batch job 10 of size 500 for namespace namespace4 and type type4
+Processing batch job 11 of size 500 for namespace namespace4 and type type4
+Finished processing batch job 11 of size 500 for namespace namespace4 and type type4
+Processing batch job 12 of size 500 for namespace namespace4 and type type4
+Finished processing batch job 12 of size 500 for namespace namespace4 and type type4
+Processing batch job 13 of size 500 for namespace namespace4 and type type4
+Finished processing batch job 13 of size 500 for namespace namespace4 and type type4
+Processing batch job 14 of size 500 for namespace namespace4 and type type4
+Finished processing batch job 14 of size 500 for namespace namespace4 and type type4
+Processing batch job 15 of size 500 for namespace namespace4 and type type4
+Finished processing batch job 15 of size 500 for namespace namespace4 and type type4
+Processing batch job 16 of size 500 for namespace namespace4 and type type4
+Finished processing batch job 16 of size 500 for namespace namespace4 and type type4
+Processing batch job 17 of size 500 for namespace namespace4 and type type4
+Finished processing batch job 17 of size 500 for namespace namespace4 and type type4
+Processing batch job 18 of size 500 for namespace namespace4 and type type4
+Finished processing batch job 18 of size 500 for namespace namespace4 and type type4
+Processing batch job 19 of size 500 for namespace namespace4 and type type4
+Finished processing batch job 19 of size 500 for namespace namespace4 and type type4
+Processing batch job 0 of size 500 for namespace namespace5 and type type5
+Long running batch job id 0 for batch job 0 of size 500 for namespace namespace5 and type type5
+Long running batch job id 200 for batch job 0 of size 500 for namespace namespace5 and type type5
+Long running batch job id 600 for batch job 0 of size 500 for namespace namespace5 and type type5
+Long running batch job id 1000 for batch job 0 of size 500 for namespace namespace5 and type type5
+Long running batch job id 1400 for batch job 0 of size 500 for namespace namespace5 and type type5
+Finished processing batch job 0 of size 500 for namespace namespace5 and type type5
+Processing batch job 1 of size 500 for namespace namespace5 and type type5
+Finished processing batch job 1 of size 500 for namespace namespace5 and type type5
+Processing batch job 2 of size 500 for namespace namespace5 and type type5
+Finished processing batch job 2 of size 500 for namespace namespace5 and type type5
+Processing batch job 3 of size 500 for namespace namespace5 and type type5
+Finished processing batch job 3 of size 500 for namespace namespace5 and type type5
+Processing batch job 4 of size 500 for namespace namespace5 and type type5
+Finished processing batch job 4 of size 500 for namespace namespace5 and type type5
+Processing batch job 5 of size 500 for namespace namespace5 and type type5
+Finished processing batch job 5 of size 500 for namespace namespace5 and type type5
+Processing batch job 6 of size 500 for namespace namespace5 and type type5
+Finished processing batch job 6 of size 500 for namespace namespace5 and type type5
+Processing batch job 7 of size 500 for namespace namespace5 and type type5
+Finished processing batch job 7 of size 500 for namespace namespace5 and type type5
+Processing batch job 8 of size 500 for namespace namespace5 and type type5
+Finished processing batch job 8 of size 500 for namespace namespace5 and type type5
+Processing batch job 9 of size 500 for namespace namespace5 and type type5
+Finished processing batch job 9 of size 500 for namespace namespace5 and type type5
+Processing batch job 10 of size 500 for namespace namespace5 and type type5
+Long running batch job id 41400 for batch job 10 of size 500 for namespace namespace5 and type type5
+Long running batch job id 42500 for batch job 10 of size 500 for namespace namespace5 and type type5
+Long running batch job id 43500 for batch job 10 of size 500 for namespace namespace5 and type type5
+Finished processing batch job 10 of size 500 for namespace namespace5 and type type5
+Processing batch job 11 of size 500 for namespace namespace5 and type type5
+Finished processing batch job 11 of size 500 for namespace namespace5 and type type5
+Processing batch job 12 of size 500 for namespace namespace5 and type type5
+Finished processing batch job 12 of size 500 for namespace namespace5 and type type5
+Processing batch job 13 of size 500 for namespace namespace5 and type type5
+Finished processing batch job 13 of size 500 for namespace namespace5 and type type5
+Processing batch job 14 of size 500 for namespace namespace5 and type type5
+Finished processing batch job 14 of size 500 for namespace namespace5 and type type5
+Processing batch job 15 of size 500 for namespace namespace5 and type type5
+Finished processing batch job 15 of size 500 for namespace namespace5 and type type5
+Processing batch job 16 of size 500 for namespace namespace5 and type type5
+Finished processing batch job 16 of size 500 for namespace namespace5 and type type5
+Processing batch job 17 of size 500 for namespace namespace5 and type type5
+Finished processing batch job 17 of size 500 for namespace namespace5 and type type5
+Processing batch job 18 of size 500 for namespace namespace5 and type type5
+Finished processing batch job 18 of size 500 for namespace namespace5 and type type5
+Processing batch job 19 of size 500 for namespace namespace5 and type type5
+Finished processing batch job 19 of size 500 for namespace namespace5 and type type5
+Processing batch job 0 of size 500 for namespace namespace6 and type type6
+Long running batch job id 0 for batch job 0 of size 500 for namespace namespace6 and type type6
+Long running batch job id 3100 for batch job 0 of size 500 for namespace namespace6 and type type6
+Long running batch job id 3400 for batch job 0 of size 500 for namespace namespace6 and type type6
+Long running batch job id 3500 for batch job 0 of size 500 for namespace namespace6 and type type6
+Long running batch job id 3700 for batch job 0 of size 500 for namespace namespace6 and type type6
+Finished processing batch job 0 of size 500 for namespace namespace6 and type type6
+Processing batch job 1 of size 500 for namespace namespace6 and type type6
+Finished processing batch job 1 of size 500 for namespace namespace6 and type type6
+Processing batch job 2 of size 500 for namespace namespace6 and type type6
+Finished processing batch job 2 of size 500 for namespace namespace6 and type type6
+Processing batch job 3 of size 500 for namespace namespace6 and type type6
+Finished processing batch job 3 of size 500 for namespace namespace6 and type type6
+Processing batch job 4 of size 500 for namespace namespace6 and type type6
+Finished processing batch job 4 of size 500 for namespace namespace6 and type type6
+Processing batch job 5 of size 500 for namespace namespace6 and type type6
+Finished processing batch job 5 of size 500 for namespace namespace6 and type type6
+Processing batch job 6 of size 500 for namespace namespace6 and type type6
+Finished processing batch job 6 of size 500 for namespace namespace6 and type type6
+Processing batch job 7 of size 500 for namespace namespace6 and type type6
+Finished processing batch job 7 of size 500 for namespace namespace6 and type type6
+Processing batch job 8 of size 500 for namespace namespace6 and type type6
+Finished processing batch job 8 of size 500 for namespace namespace6 and type type6
+Processing batch job 9 of size 500 for namespace namespace6 and type type6
+Finished processing batch job 9 of size 500 for namespace namespace6 and type type6
+Processing batch job 10 of size 500 for namespace namespace6 and type type6
+Long running batch job id 40100 for batch job 10 of size 500 for namespace namespace6 and type type6
+Long running batch job id 41500 for batch job 10 of size 500 for namespace namespace6 and type type6
+Long running batch job id 41700 for batch job 10 of size 500 for namespace namespace6 and type type6
+Long running batch job id 42400 for batch job 10 of size 500 for namespace namespace6 and type type6
+Long running batch job id 42700 for batch job 10 of size 500 for namespace namespace6 and type type6
+Long running batch job id 43400 for batch job 10 of size 500 for namespace namespace6 and type type6
+Finished processing batch job 10 of size 500 for namespace namespace6 and type type6
+Processing batch job 11 of size 500 for namespace namespace6 and type type6
+Finished processing batch job 11 of size 500 for namespace namespace6 and type type6
+Processing batch job 12 of size 500 for namespace namespace6 and type type6
+Finished processing batch job 12 of size 500 for namespace namespace6 and type type6
+Processing batch job 13 of size 500 for namespace namespace6 and type type6
+Finished processing batch job 13 of size 500 for namespace namespace6 and type type6
+Processing batch job 14 of size 500 for namespace namespace6 and type type6
+Finished processing batch job 14 of size 500 for namespace namespace6 and type type6
+Processing batch job 15 of size 500 for namespace namespace6 and type type6
+Finished processing batch job 15 of size 500 for namespace namespace6 and type type6
+Processing batch job 16 of size 500 for namespace namespace6 and type type6
+Finished processing batch job 16 of size 500 for namespace namespace6 and type type6
+Processing batch job 17 of size 500 for namespace namespace6 and type type6
+Finished processing batch job 17 of size 500 for namespace namespace6 and type type6
+Processing batch job 18 of size 500 for namespace namespace6 and type type6
+Finished processing batch job 18 of size 500 for namespace namespace6 and type type6
+Processing batch job 19 of size 500 for namespace namespace6 and type type6
+Finished processing batch job 19 of size 500 for namespace namespace6 and type type6
+Processing batch job 0 of size 500 for namespace namespace7 and type type7
+Long running batch job id 0 for batch job 0 of size 500 for namespace namespace7 and type type7
+Long running batch job id 800 for batch job 0 of size 500 for namespace namespace7 and type type7
+Long running batch job id 1600 for batch job 0 of size 500 for namespace namespace7 and type type7
+Long running batch job id 1800 for batch job 0 of size 500 for namespace namespace7 and type type7
+Long running batch job id 2200 for batch job 0 of size 500 for namespace namespace7 and type type7
+Long running batch job id 2600 for batch job 0 of size 500 for namespace namespace7 and type type7
+Finished processing batch job 0 of size 500 for namespace namespace7 and type type7
+Processing batch job 1 of size 500 for namespace namespace7 and type type7
+Finished processing batch job 1 of size 500 for namespace namespace7 and type type7
+Processing batch job 2 of size 500 for namespace namespace7 and type type7
+Finished processing batch job 2 of size 500 for namespace namespace7 and type type7
+Processing batch job 3 of size 500 for namespace namespace7 and type type7
+Finished processing batch job 3 of size 500 for namespace namespace7 and type type7
+Processing batch job 4 of size 500 for namespace namespace7 and type type7
+Finished processing batch job 4 of size 500 for namespace namespace7 and type type7
+Processing batch job 5 of size 500 for namespace namespace7 and type type7
+Finished processing batch job 5 of size 500 for namespace namespace7 and type type7
+Processing batch job 6 of size 500 for namespace namespace7 and type type7
+Finished processing batch job 6 of size 500 for namespace namespace7 and type type7
+Processing batch job 7 of size 500 for namespace namespace7 and type type7
+Finished processing batch job 7 of size 500 for namespace namespace7 and type type7
+Processing batch job 8 of size 500 for namespace namespace7 and type type7
+Finished processing batch job 8 of size 500 for namespace namespace7 and type type7
+Processing batch job 9 of size 500 for namespace namespace7 and type type7
+Finished processing batch job 9 of size 500 for namespace namespace7 and type type7
+Processing batch job 10 of size 500 for namespace namespace7 and type type7
+Long running batch job id 40800 for batch job 10 of size 500 for namespace namespace7 and type type7
+Long running batch job id 42800 for batch job 10 of size 500 for namespace namespace7 and type type7
+Long running batch job id 43100 for batch job 10 of size 500 for namespace namespace7 and type type7
+Long running batch job id 43200 for batch job 10 of size 500 for namespace namespace7 and type type7
+Long running batch job id 43600 for batch job 10 of size 500 for namespace namespace7 and type type7
+Finished processing batch job 10 of size 500 for namespace namespace7 and type type7
+Processing batch job 11 of size 500 for namespace namespace7 and type type7
+Finished processing batch job 11 of size 500 for namespace namespace7 and type type7
+Processing batch job 12 of size 500 for namespace namespace7 and type type7
+Finished processing batch job 12 of size 500 for namespace namespace7 and type type7
+Processing batch job 13 of size 500 for namespace namespace7 and type type7
+Finished processing batch job 13 of size 500 for namespace namespace7 and type type7
+Processing batch job 14 of size 500 for namespace namespace7 and type type7
+Finished processing batch job 14 of size 500 for namespace namespace7 and type type7
+Processing batch job 15 of size 500 for namespace namespace7 and type type7
+Finished processing batch job 15 of size 500 for namespace namespace7 and type type7
+Processing batch job 16 of size 500 for namespace namespace7 and type type7
+Finished processing batch job 16 of size 500 for namespace namespace7 and type type7
+Processing batch job 17 of size 500 for namespace namespace7 and type type7
+Finished processing batch job 17 of size 500 for namespace namespace7 and type type7
+Processing batch job 18 of size 500 for namespace namespace7 and type type7
+Finished processing batch job 18 of size 500 for namespace namespace7 and type type7
+Processing batch job 19 of size 500 for namespace namespace7 and type type7
+Finished processing batch job 19 of size 500 for namespace namespace7 and type type7
+Processing batch job 0 of size 500 for namespace namespace8 and type type8
+Long running batch job id 0 for batch job 0 of size 500 for namespace namespace8 and type type8
+Long running batch job id 1700 for batch job 0 of size 500 for namespace namespace8 and type type8
+Long running batch job id 3600 for batch job 0 of size 500 for namespace namespace8 and type type8
+Finished processing batch job 0 of size 500 for namespace namespace8 and type type8
+Processing batch job 1 of size 500 for namespace namespace8 and type type8
+Finished processing batch job 1 of size 500 for namespace namespace8 and type type8
+Processing batch job 2 of size 500 for namespace namespace8 and type type8
+Finished processing batch job 2 of size 500 for namespace namespace8 and type type8
+Processing batch job 3 of size 500 for namespace namespace8 and type type8
+Finished processing batch job 3 of size 500 for namespace namespace8 and type type8
+Processing batch job 4 of size 500 for namespace namespace8 and type type8
+Finished processing batch job 4 of size 500 for namespace namespace8 and type type8
+Processing batch job 5 of size 500 for namespace namespace8 and type type8
+Finished processing batch job 5 of size 500 for namespace namespace8 and type type8
+Processing batch job 6 of size 500 for namespace namespace8 and type type8
+Finished processing batch job 6 of size 500 for namespace namespace8 and type type8
+Processing batch job 7 of size 500 for namespace namespace8 and type type8
+Finished processing batch job 7 of size 500 for namespace namespace8 and type type8
+Processing batch job 8 of size 500 for namespace namespace8 and type type8
+Finished processing batch job 8 of size 500 for namespace namespace8 and type type8
+Processing batch job 9 of size 500 for namespace namespace8 and type type8
+Finished processing batch job 9 of size 500 for namespace namespace8 and type type8
+Processing batch job 10 of size 500 for namespace namespace8 and type type8
+Long running batch job id 40400 for batch job 10 of size 500 for namespace namespace8 and type type8
+Long running batch job id 40500 for batch job 10 of size 500 for namespace namespace8 and type type8
+Long running batch job id 40600 for batch job 10 of size 500 for namespace namespace8 and type type8
+Long running batch job id 41100 for batch job 10 of size 500 for namespace namespace8 and type type8
+Long running batch job id 43000 for batch job 10 of size 500 for namespace namespace8 and type type8
+Finished processing batch job 10 of size 500 for namespace namespace8 and type type8
+Processing batch job 11 of size 500 for namespace namespace8 and type type8
+Finished processing batch job 11 of size 500 for namespace namespace8 and type type8
+Processing batch job 12 of size 500 for namespace namespace8 and type type8
+Finished processing batch job 12 of size 500 for namespace namespace8 and type type8
+Processing batch job 13 of size 500 for namespace namespace8 and type type8
+Finished processing batch job 13 of size 500 for namespace namespace8 and type type8
+Processing batch job 14 of size 500 for namespace namespace8 and type type8
+Finished processing batch job 14 of size 500 for namespace namespace8 and type type8
+Processing batch job 15 of size 500 for namespace namespace8 and type type8
+Finished processing batch job 15 of size 500 for namespace namespace8 and type type8
+Processing batch job 16 of size 500 for namespace namespace8 and type type8
+Finished processing batch job 16 of size 500 for namespace namespace8 and type type8
+Processing batch job 17 of size 500 for namespace namespace8 and type type8
+Finished processing batch job 17 of size 500 for namespace namespace8 and type type8
+Processing batch job 18 of size 500 for namespace namespace8 and type type8
+Finished processing batch job 18 of size 500 for namespace namespace8 and type type8
+Processing batch job 19 of size 500 for namespace namespace8 and type type8
+Finished processing batch job 19 of size 500 for namespace namespace8 and type type8
+Processing batch job 0 of size 500 for namespace namespace9 and type type9
+Long running batch job id 0 for batch job 0 of size 500 for namespace namespace9 and type type9
+Long running batch job id 500 for batch job 0 of size 500 for namespace namespace9 and type type9
+Long running batch job id 1100 for batch job 0 of size 500 for namespace namespace9 and type type9
+Long running batch job id 1500 for batch job 0 of size 500 for namespace namespace9 and type type9
+Long running batch job id 2000 for batch job 0 of size 500 for namespace namespace9 and type type9
+Long running batch job id 2800 for batch job 0 of size 500 for namespace namespace9 and type type9
+Long running batch job id 3900 for batch job 0 of size 500 for namespace namespace9 and type type9
+Finished processing batch job 0 of size 500 for namespace namespace9 and type type9
+Processing batch job 1 of size 500 for namespace namespace9 and type type9
+Finished processing batch job 1 of size 500 for namespace namespace9 and type type9
+Processing batch job 2 of size 500 for namespace namespace9 and type type9
+Finished processing batch job 2 of size 500 for namespace namespace9 and type type9
+Processing batch job 3 of size 500 for namespace namespace9 and type type9
+Finished processing batch job 3 of size 500 for namespace namespace9 and type type9
+Processing batch job 4 of size 500 for namespace namespace9 and type type9
+Finished processing batch job 4 of size 500 for namespace namespace9 and type type9
+Processing batch job 5 of size 500 for namespace namespace9 and type type9
+Finished processing batch job 5 of size 500 for namespace namespace9 and type type9
+Processing batch job 6 of size 500 for namespace namespace9 and type type9
+Finished processing batch job 6 of size 500 for namespace namespace9 and type type9
+Processing batch job 7 of size 500 for namespace namespace9 and type type9
+Finished processing batch job 7 of size 500 for namespace namespace9 and type type9
+Processing batch job 8 of size 500 for namespace namespace9 and type type9
+Finished processing batch job 8 of size 500 for namespace namespace9 and type type9
+Processing batch job 9 of size 500 for namespace namespace9 and type type9
+Finished processing batch job 9 of size 500 for namespace namespace9 and type type9
+Processing batch job 10 of size 500 for namespace namespace9 and type type9
+Long running batch job id 41200 for batch job 10 of size 500 for namespace namespace9 and type type9
+Long running batch job id 41300 for batch job 10 of size 500 for namespace namespace9 and type type9
+Long running batch job id 41600 for batch job 10 of size 500 for namespace namespace9 and type type9
+Long running batch job id 42000 for batch job 10 of size 500 for namespace namespace9 and type type9
+Long running batch job id 44200 for batch job 10 of size 500 for namespace namespace9 and type type9
+Finished processing batch job 10 of size 500 for namespace namespace9 and type type9
+Processing batch job 11 of size 500 for namespace namespace9 and type type9
+Finished processing batch job 11 of size 500 for namespace namespace9 and type type9
+Processing batch job 12 of size 500 for namespace namespace9 and type type9
+Finished processing batch job 12 of size 500 for namespace namespace9 and type type9
+Processing batch job 13 of size 500 for namespace namespace9 and type type9
+Finished processing batch job 13 of size 500 for namespace namespace9 and type type9
+Processing batch job 14 of size 500 for namespace namespace9 and type type9
+Finished processing batch job 14 of size 500 for namespace namespace9 and type type9
+Processing batch job 15 of size 500 for namespace namespace9 and type type9
+Finished processing batch job 15 of size 500 for namespace namespace9 and type type9
+Processing batch job 16 of size 500 for namespace namespace9 and type type9
+Finished processing batch job 16 of size 500 for namespace namespace9 and type type9
+Processing batch job 17 of size 500 for namespace namespace9 and type type9
+Finished processing batch job 17 of size 500 for namespace namespace9 and type type9
+Processing batch job 18 of size 500 for namespace namespace9 and type type9
+Finished processing batch job 18 of size 500 for namespace namespace9 and type type9
+Processing batch job 19 of size 500 for namespace namespace9 and type type9
+Finished processing batch job 19 of size 500 for namespace namespace9 and type type9
+Finishing the sequential batch processing: Processed 100000 registers.
+Clearing data for execution:
+Finished cleaning data for execution. 1 database removed. 1 files removed.
+Jul 28, 2018 4:42:16 A.M. com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:5, serverValue:151}] to localhost:27017 because the pool has been closed.
+Jul 28, 2018 4:42:16 A.M. com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:8, serverValue:147}] to localhost:27017 because the pool has been closed.
+Jul 28, 2018 4:42:16 A.M. com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:4, serverValue:152}] to localhost:27017 because the pool has been closed.
+Jul 28, 2018 4:42:16 A.M. com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:2, serverValue:146}] to localhost:27017 because the pool has been closed.
+Jul 28, 2018 4:42:16 A.M. com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:7, serverValue:149}] to localhost:27017 because the pool has been closed.
+Jul 28, 2018 4:42:16 A.M. com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:3, serverValue:148}] to localhost:27017 because the pool has been closed.
+Jul 28, 2018 4:42:16 A.M. com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:9, serverValue:150}] to localhost:27017 because the pool has been closed.
+Jul 28, 2018 4:42:16 A.M. com.mongodb.diagnostics.logging.JULLogger log
+INFO: Closed connection [connectionId{localValue:6, serverValue:153}] to localhost:27017 because the pool has been closed.
+Finished to run at:  2018/07/28 04:42:16
+
+Process finished with exit code 0
